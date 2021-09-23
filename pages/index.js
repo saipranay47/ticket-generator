@@ -3,11 +3,15 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { signIn, signOut, useSession } from "next-auth/client";
 import profile from "../public/profile.png";
-import ticketlogo from "../public/ticketlogo.png";
+// import ticketlogo from "../public/ticketlogo.png";
+import React, { useEffect, useRef } from 'react'
+import { useToImage } from 'react-to-image'
 
 export default function Home() {
   const [session] = useSession();
   console.log(session);
+
+  const { ref, isLoading, getPng } = useToImage()
 
   // const componentRef = useRef();
   // const Ticket = React.forwardRef((props, ref) => (
@@ -67,10 +71,13 @@ export default function Home() {
         {/* <p>{session? session.user.name : "Your Name"}</p> */}
 
         <div className={styles.ticket_container}>
-          <div>
+          <div ref={ref}>
             <div className={styles.ticket}>
+            
         <div className={styles.ticket_event_name}>
-          <Image src={ticketlogo} />
+          {/* <Image src="/ticketlogo.png" width={130} height={45}/> */}
+          
+          <br />
         </div>
         <div className={styles.ticket_profile}>
           <Image
@@ -93,13 +100,13 @@ export default function Home() {
             Hosted by
             <br />
             <br />
-            <b> OSC VIT-AP</b> &nbsp; &nbsp; &nbsp; <b> WIOS VIT-AP </b>
+            <b> OSC VITAP</b> &nbsp; &nbsp; <b> WIOS VITAP </b>
           </p>
         </div>
       </div>
         </div>
-          <button onClick={!session ? signIn : signOut}>
-            {!session ? "Claim with github" : "Sign out"}
+          <button onClick={!session ? signIn : getPng}>
+            {!session ? "Claim with github" : "Downlode"}
           </button>
         </div>
       </main>
