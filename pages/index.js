@@ -3,7 +3,6 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { signIn, signOut, useSession } from "next-auth/client";
 import profile from "../public/profile.png";
-// import ticketlogo from "../public/ticketlogo.png";
 import React, { useEffect, useRef } from 'react'
 import { useToImage } from 'react-to-image'
 
@@ -11,42 +10,9 @@ export default function Home() {
   const [session] = useSession();
   console.log(session);
 
-  const { ref, isLoading, getPng } = useToImage()
+  const { ref, getPng } = useToImage()
 
-  // const componentRef = useRef();
-  // const Ticket = React.forwardRef((props, ref) => (
-  //   <div ref={ref}>
-  //     <div className={styles.ticket}>
-  //       <div className={styles.ticket_event_name}>
-  //         <Image src={ticketlogo} />
-  //       </div>
-  //       <div className={styles.ticket_profile}>
-  //         <Image
-  //           src={session ? session.user.image : profile}
-  //           width={100}
-  //           height={100}
-  //         />
-  //         <h3>{session ? session.user.name : "Your Name"}</h3>
-  //       </div>
-  //       <div className={styles.ticket_date}>
-  //         <p style={{ fontSize: "12px" }}>
-  //           October 3, 2021
-  //           <br />
-  //           4pm Online
-  //         </p>
-  //       </div>
 
-  //       <div className={styles.ticket_host}>
-  //         <p style={{ fontSize: "10px" }}>
-  //           Hosted by
-  //           <br />
-  //           <br />
-  //           <b> OSC VIT-AP</b> &nbsp; &nbsp; &nbsp; <b> WIOS VIT-AP </b>
-  //         </p>
-  //       </div>
-  //     </div>
-  //   </div>
-  // ));
 
   return (
     <div className={styles.container}>
@@ -64,7 +30,7 @@ export default function Home() {
         </p>
 
         <p className={styles.event_details}>
-          Event details .....lorem ipsum lorem ipsum lorem ipsum
+          Speaker: <b>Giuseppe Bonocore </b> Principal Solution Architect @RedHat.
           <br />
           October 3, 2021 4pm / Online
         </p>
@@ -106,8 +72,9 @@ export default function Home() {
       </div>
         </div>
           <button onClick={!session ? signIn : getPng}>
-            {!session ? "Claim with github" : "Downlode"}
+            {!session ? "Claim with github" : "Download"}
           </button>
+          <p style={{marginTop:"50px"}}>Share this on Instagram, Linkedin tag us @oscvitap and <br /> get a chance to win some amazing prizes </p>
         </div>
       </main>
 
