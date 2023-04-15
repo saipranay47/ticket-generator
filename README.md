@@ -1,4 +1,5 @@
-# Ticket Generator
+# Ticket Generator - [Live Demo](https://ticket-generator-alpha.vercel.app)
+
 
 Ticket Generator is a web application designed to simplify the ticketing process for club events. It allows attendees to generate personalized digital tickets by logging in with their GitHub accounts. The generated tickets can be easily downloaded as shareable images, promoting seamless sharing on social media platforms.
 
