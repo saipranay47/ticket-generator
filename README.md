@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ticket Generator
+
+Ticket Generator is a web application designed to simplify the ticketing process for club events. It allows attendees to generate personalized digital tickets by logging in with their GitHub accounts. The generated tickets can be easily downloaded as shareable images, promoting seamless sharing on social media platforms.
+
+## Features
+
+- GitHub authentication for user login
+- Personalized digital ticket generation
+- Shareable ticket images for social media
+- Built with Next.js for fast performance
 
 ## Getting Started
 
-First, run the development server:
+These instructions will help you set up the project on your local machine for development and testing purposes.
 
-```bash
+### Prerequisites
+
+- Node.js
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+csharp
+Copy code
+# Ticket Generator
+
+Ticket Generator is a web application designed to simplify the ticketing process for club events. It allows attendees to generate personalized digital tickets by logging in with their GitHub accounts. The generated tickets can be easily downloaded as shareable images, promoting seamless sharing on social media platforms.
+
+## Features
+
+- GitHub authentication for user login
+- Personalized digital ticket generation
+- Shareable ticket images for social media
+- Built with Next.js for fast performance
+
+## Getting Started
+
+These instructions will help you set up the project on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+git clone https://github.com/saipranay47/ticket-generator.git
+
+2. Change to the project directory:
+cd ticket-generator
+
+3. Install the required dependencies:
+npm install
+or
+yarn
+
+4. Create a `.env.local` file in the root folder and add the required environment variables. You can find an example in `.env.example`.
+
+5. Run the development server:
 npm run dev
-# or
+or
 yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should now be running on `http://localhost:3000`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Built With
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [Next.js](https://nextjs.org/)
+- [GitHub OAuth](https://docs.github.com/en/developers/apps/building-oauth-apps)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contributing
 
-## Learn More
+Contributions are welcome! Feel free to submit a pull request or open an issue to improve the project.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
